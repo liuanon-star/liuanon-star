@@ -1,0 +1,23 @@
+#คำนวณหาค่า BMI
+import math
+
+height = float(input('height(cm) : '))
+weight = float(input('weight(kg) : '))
+h = height / 100
+bmi = (weight/(math.pow(h, 2)))
+
+if bmi >= 40:
+    shape = 'Max Fat'
+elif bmi >= 35:
+    shape = 'Fat Level 2'
+elif bmi >= 28.5:
+    shape = 'Fat Level 1'
+elif bmi >= 23.5:
+    shape = 'Over Weight'
+elif bmi >= 18.5:
+    shape = 'Normal'
+else:
+    shape = 'Lower than Normal'
+
+print('BMI is',format(bmi, '.2f'))
+print('Shape is',shape)
